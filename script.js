@@ -1,9 +1,10 @@
 
 const male_cards_wrapper = document.querySelector('.cards_wrapper')
+const female_cards_wraper = document.querySelector('.female_cards_wrapper')
 
 
-const get_profiles = async function (gender, religion, caste, cards_container) {
-    const res = await fetch(`https://api.betterhalf.ai/v2/search-users?limit=6&gender=${gender}&religions=${religion}&caste=${caste}`)
+const get_profiles = async function (gender, cards_container) {
+    const res = await fetch(`https://api.betterhalf.ai/v2/search-users?limit=6&gender=${gender}`)
     const data = await res.json()
     const profiles = data.results
     console.log(profiles)
@@ -21,7 +22,7 @@ const get_profiles = async function (gender, religion, caste, cards_container) {
         const last_seen = profile.active_at
         const last_seen_date = new Date(last_seen)
         const last_seen_time = last_seen_date.toLocaleTimeString('en-IN', { hour12: false })
-        
+
         
 
         const now = new Date()
@@ -31,8 +32,7 @@ const get_profiles = async function (gender, religion, caste, cards_container) {
         //console.log(current_time - last_seen_time)
     })
 
-
 }
 
 
-get_profiles('male', 'hindu', 'aheer', male_cards_wrapper)
+get_profiles('male', male_cards_wrapper)
