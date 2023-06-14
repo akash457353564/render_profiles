@@ -39,7 +39,9 @@ const get_profiles = async function (gender, cards_container, loader_icon) {
           profile.caste
         }</div><div id="religiontxt" class="separator">,</div><div id="religiontxt" class="religiontxt">${
           profile.religion
-        }</div></div><div class="text-wrapper"><div id="desigtxt" class="hometown-label">🧰</div><div id="desigtxt" class="desigtxt">Senior Quality Evaluator</div></div><div class="text-wrapper"><div id="desigtxt" class="hometown-label">🏠</div><div id="desigtxt" class="locationtxt">${
+        }</div></div><div class="text-wrapper"><div id="desigtxt" class="hometown-label">🧰</div><div id="desigtxt" class="desigtxt">${
+          profile.designation
+        }</div></div><div class="text-wrapper"><div id="desigtxt" class="hometown-label">🏠</div><div id="desigtxt" class="locationtxt">${
           profile.locations.features[0].properties.city
         }</div><div id="religiontxt" class="separator">,</div><div id="desigtxt" class="statetxt">${
           profile.locations.features[0].properties.state
@@ -56,7 +58,7 @@ const get_profiles = async function (gender, cards_container, loader_icon) {
 };
 
 get_profiles("male", male_cards_wrapper, "preloader");
-get_profiles("female", female_cards_wraper, "preloaderFemale");
+get_profiles("female", female_cards_wraper, "preloader");
 
 ////////////////////////////////SLIDER CODE///////////////////////////////////////////
 
