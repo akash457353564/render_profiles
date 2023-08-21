@@ -3,14 +3,14 @@ const data_json = data.textContent;
 
 const data_obj = JSON.parse(data_json);
 
-//console.log(data_obj);
+console.log(data_obj);
 
 const male_cards_wrapper = document.querySelector(".cards_wrapper");
 const female_cards_wraper = document.querySelector(".female_cards_wrapper");
 
 const get_profiles = async function (gender, cards_container, loader_icon) {
   const res = await fetch(
-    `https://api.betterhalf.ai/v2/search-users?limit=6&gender=${gender}&${data_obj.parameter}=${data_obj.value}`
+    `https://api.betterhalf.ai/v2/search-users?limit=6&gender=${gender}&${data_obj.parameter}=${data_obj.value}&${data_obj.parameter2}=${data_obj.value2}`
   );
 
   try {

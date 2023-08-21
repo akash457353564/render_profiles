@@ -577,11 +577,11 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 const data = document.querySelector('[data-element="param-data"]');
 const data_json = data.textContent;
 const data_obj = JSON.parse(data_json);
-//console.log(data_obj);
+console.log(data_obj);
 const male_cards_wrapper = document.querySelector(".cards_wrapper");
 const female_cards_wraper = document.querySelector(".female_cards_wrapper");
 const get_profiles = async function(gender, cards_container, loader_icon) {
-    const res = await fetch(`https://api.betterhalf.ai/v2/search-users?limit=6&gender=${gender}&${data_obj.parameter}=${data_obj.value}`);
+    const res = await fetch(`https://api.betterhalf.ai/v2/search-users?limit=6&gender=${gender}&${data_obj.parameter}=${data_obj.value}&${data_obj.parameter2}=${data_obj.value2}`);
     try {
         const data = await res.json();
         const profiles = data.results;
@@ -602,7 +602,7 @@ const get_profiles = async function(gender, cards_container, loader_icon) {
     }
 };
 get_profiles("male", male_cards_wrapper, "preloader");
-get_profiles("female", female_cards_wraper, "preloader");
+get_profiles("female", female_cards_wraper, "preloaderFemale");
 ////////////////////////////////SLIDER CODE///////////////////////////////////////////
 function in__home_v3() {
     let splides = $(".in__home_v3");
