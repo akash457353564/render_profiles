@@ -651,6 +651,8 @@ document.querySelector("#right-arrow").addEventListener("click", ()=>{
 });
 document.querySelector(".splide__arrow--next").style.display = "none";
 document.querySelector(".splide__arrow--prev").style.display = "none";
+///////////////////////////////////////////////////////////////////////////////
+document.querySelector(".sidebar-wrapper").insertAdjacentHTML("afterbegin", `<div class="matrimony_page-sidebar"><h3 class="nav-sidebar-heading">Match by Marital status</h3><div class="w-dyn-list"><div role="list" class="w-dyn-items"><div role="listitem" class="w-dyn-item"><div class="div-block-933"><a href="/matrimonials/awaiting-divorce-christian-matrimony" target="_blank" class="sidebar-txt">Awaiting Divorce Christian Matrimony</a></div></div><div role="listitem" class="w-dyn-item"><div class="div-block-933"><a href="/matrimonials/divorcee-christian-matrimony" target="_blank" class="sidebar-txt">Divorcee Christian Matrimony</a></div></div><div role="listitem" class="w-dyn-item"><div class="div-block-933"><a href="/matrimonials/unmarried-christian-matrimony" target="_blank" class="sidebar-txt">Unmarried Christian Matrimony</a></div></div><div role="listitem" class="w-dyn-item"><div class="div-block-933"><a href="/matrimonials/widow-christian-matrimony" target="_blank" class="sidebar-txt">Widow Christian Matrimony</a></div></div></div></div></div>`);
 
 },{}]},["gAoaA","6rimH"], "6rimH", "parcelRequire1718")
 
